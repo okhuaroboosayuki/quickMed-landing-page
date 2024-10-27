@@ -10,3 +10,51 @@
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
+
+@layer components {
+  .button {
+    @apply py-3 px-6 rounded-[30px] font-medium text-lg;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  .hover-underline {
+    position: relative;
+    @apply hover:text-midnight-charcoal;
+  }
+
+  .hover-underline::after {
+    content: "";
+    @apply absolute left-0 bottom-0 w-0 top-8 h-[2px] bg-midnight-charcoal transition-smooth;
+  }
+
+  .hover-underline:hover::after {
+    @apply w-full;
+  }
+
+  .button-hover-white {
+    @apply hover:bg-white hover:text-midnight-charcoal border-bright-violet;
+  }
+
+  .button-hover-blue {
+    @apply hover:bg-bright-violet hover:text-white;
+  }
+
+  .toggle-menu {
+    & span:first-child {
+      @apply origin-bottom rotate-45 translate-y-2;
+    }
+
+    & span:nth-child(2) {
+      @apply opacity-0;
+    }
+
+    & span:last-child {
+      @apply origin-top -rotate-45 -translate-y-2 w-7;
+    }
+  }
+}
