@@ -7,43 +7,52 @@
     <title>QuickMed - Clinical Documentation Made Easy</title>
   </head>
 
-  <body class="min-h-screen">
-    <header class="flex items-center justify-between bg-white px-24">
+  <body class="min-h-screen px-4 sm:px-14 xl:px-20 font-inter">
+    <header class="flex items-center justify-between py-5 bg-white">
       <div>
-        <a href="/" class="flex items-center gap-3">
+        <a href="/" class="flex items-center gap-2 text-xl font-semibold sm:gap-3 sm:text-2xl text-midnight-charcoal">
           <img src="/build/images/logo.png" alt="QuickMed logo" />
           <span>QuickMed</span>
         </a>
       </div>
 
-      <nav>
-        <ul class="flex">
-          <li>
-            <a href="">home</a>
+      <nav class="hidden lg:block">
+        <ul class="flex items-center gap-[25px] text-blue-gray capitalize text-lg">
+          <li class="hover-underline">
+            <a href="/">home</a>
           </li>
-          <li>
+          <li class="hover-underline">
             <a href="">features</a>
           </li>
-          <li>
+          <li class="hover-underline">
             <a href="">how it works</a>
           </li>
-          <li>
+          <li class="hover-underline">
             <a href="">pricing</a>
           </li>
-          <li>
+          <li class="uppercase hover-underline">
             <a href="">faq</a>
           </li>
         </ul>
       </nav>
 
-      <div class="flex">
-        <div>Log in</div>
-        <div>Sign up</div>
+      <div class="items-center gap-[20px] hidden lg:flex">
+        <button class="transition-smooth button button-hover-blue">Log in</button>
+
+        <button class="text-white border transition-smooth bg-bright-violet button button-hover-white">Sign up</button>
       </div>
+
+      <button id="mobileMenuIcon" class="relative flex flex-col items-start justify-center gap-[6px] lg:hidden">
+        <span class="w-7 h-0.5 bg-gray-800 transition-smooth"></span>
+        <span class="w-6 h-0.5 bg-gray-800 transition-smooth"></span>
+        <span class="w-5 h-0.5 bg-gray-800 transition-smooth"></span>
+      </button>
     </header>
 
     <main>main part</main>
 
     <footer>footer</footer>
+
+    <script src="/build/js/main.js" defer></script>
   </body>
 </html>
