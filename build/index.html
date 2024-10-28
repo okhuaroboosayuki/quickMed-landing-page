@@ -8,16 +8,16 @@
   </head>
 
   <body class="min-h-screen px-4 sm:px-14 xl:px-20 font-inter">
-    <header class="flex items-center justify-between py-5 bg-white">
+    <header class="justify-between py-5 bg-white flex-center">
       <div>
-        <a href="/" class="flex items-center gap-2 text-xl font-semibold sm:gap-3 sm:text-2xl text-midnight-charcoal">
+        <a href="/" class="gap-2 text-xl font-semibold flex-center sm:gap-3 sm:text-2xl text-midnight-charcoal">
           <img src="images/logo.png" alt="QuickMed logo" />
           <span>QuickMed</span>
         </a>
       </div>
 
-      <nav class="hidden lg:block">
-        <ul class="flex items-center gap-[25px] text-blue-gray capitalize text-lg">
+      <nav class="hidden lg:block" id="nav">
+        <ul class="flex-center gap-[25px] text-blue-gray capitalize text-lg" id="nav-list">
           <li class="hover-underline after:bg-midnight-charcoal">
             <a href="/">home</a>
           </li>
@@ -36,7 +36,7 @@
         </ul>
       </nav>
 
-      <div class="items-center gap-[20px] hidden lg:flex">
+      <div class="items-center gap-[20px] hidden lg:flex" id="btns">
         <button class="transition-smooth button button-hover-blue">Log in</button>
 
         <button class="text-white border transition-smooth bg-bright-violet button button-hover-white">Sign up</button>
@@ -49,7 +49,11 @@
       </button>
     </header>
 
-    <main>main part</main>
+    <main>
+      <section></section>
+
+      <section></section>
+    </main>
 
     <footer>footer</footer>
 
