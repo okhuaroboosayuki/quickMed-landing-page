@@ -22,20 +22,12 @@
     @apply transition-all duration-500 ease-in-out;
   }
 
+  /* list item hover */
   .hover-underline {
-    position: relative;
-    @apply hover:text-midnight-charcoal;
+    @apply hover:text-midnight-charcoal relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:top-8 after:h-[2px] after:transition-smooth hover:after:w-full;
   }
 
-  .hover-underline::after {
-    content: "";
-    @apply absolute left-0 bottom-0 w-0 top-8 h-[2px] bg-midnight-charcoal transition-smooth;
-  }
-
-  .hover-underline:hover::after {
-    @apply w-full;
-  }
-
+  /* button toggle */
   .button-hover-white {
     @apply hover:bg-white hover:text-midnight-charcoal border-bright-violet;
   }
@@ -44,6 +36,7 @@
     @apply hover:bg-bright-violet hover:text-white;
   }
 
+  /* menu toggle */
   .toggle-menu {
     & span:first-child {
       @apply origin-bottom rotate-45 translate-y-2;
