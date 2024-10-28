@@ -711,8 +711,24 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.hover-underline {
+/* list item hover */
+
+.hover-underline{
   position: relative;
+}
+
+.hover-underline::after{
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  top: 2rem;
+  height: 2px;
+  width: 0px;
+  --tw-content: '';
+  content: var(--tw-content);
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hover-underline:hover{
@@ -720,24 +736,12 @@ video {
   color: rgb(22 22 24 / var(--tw-text-opacity));
 }
 
-.hover-underline::after {
-  content: "";
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  top: 2rem;
-  height: 2px;
-  width: 0px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 22 24 / var(--tw-bg-opacity));
-  transition-property: all;
-  transition-duration: 500ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .hover-underline:hover::after{
+  content: var(--tw-content);
   width: 100%;
 }
+
+/* button toggle */
 
 .button-hover-white{
   --tw-border-opacity: 1;
@@ -757,6 +761,8 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+
+/* menu toggle */
 
 .toggle-menu {
   & span:first-child{
@@ -794,6 +800,12 @@ video {
   padding: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
+}
+
+.after\:bg-midnight-charcoal::after{
+  content: var(--tw-content);
+  --tw-bg-opacity: 1;
+  background-color: rgb(22 22 24 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px){
