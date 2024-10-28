@@ -7,7 +7,7 @@ module.exports = {
         inter: ["Inter", "sans-serif"],
       },
       colors: {
-        Navy: "#141C53",
+        navy: "#141C53",
         "blue-gray": "#6C737F",
         "midnight-charcoal": "#161618",
         "bright-violet": "#662FFF",
