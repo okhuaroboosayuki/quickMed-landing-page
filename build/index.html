@@ -8,7 +8,7 @@
   </head>
 
   <body class="min-h-screen px-4 sm:px-14 xl:px-20 font-inter">
-    <header class="justify-between py-5 bg-white flex-center">
+    <header class="!justify-between py-5 bg-white flex-center">
       <div>
         <a href="/" class="gap-2 text-xl font-semibold flex-center sm:gap-3 sm:text-2xl text-midnight-charcoal">
           <img src="images/logo.png" alt="QuickMed logo" />
@@ -16,8 +16,8 @@
         </a>
       </div>
 
-      <nav class="hidden lg:block" id="nav">
-        <ul class="flex-center gap-[25px] text-blue-gray capitalize text-lg" id="nav-list">
+      <nav class="hidden lg:block" id="nav" role="navigation">
+        <ul class="flex-center gap-[25px] text-blue-gray font-medium capitalize text-lg" id="nav-list">
           <li class="hover-underline after:bg-midnight-charcoal">
             <a href="/">home</a>
           </li>
@@ -37,12 +37,12 @@
       </nav>
 
       <div class="items-center gap-[20px] hidden lg:flex" id="btns">
-        <button class="transition-smooth button button-hover-blue">Log in</button>
+        <button class="transition-smooth button !border-none button-hover-blue">Log in</button>
 
-        <button class="text-white border transition-smooth bg-bright-violet button button-hover-white">Sign up</button>
+        <button class="blue-button button button-hover-white">Sign up</button>
       </div>
 
-      <button id="mobileMenuIcon" class="relative flex flex-col items-start justify-center gap-[6px] lg:hidden z-50">
+      <button id="mobileMenuIcon" class="relative flex flex-col items-start justify-center gap-[6px] lg:hidden z-50" role="button">
         <span class="w-7 h-0.5 bg-gray-800 transition-smooth"></span>
         <span class="w-6 h-0.5 bg-gray-800 transition-smooth"></span>
         <span class="w-5 h-0.5 bg-gray-800 transition-smooth"></span>
@@ -50,9 +50,31 @@
     </header>
 
     <main>
-      <section></section>
+      <section class="flex-col gap-16 mt-5 sm:mt-10 lg:mt-20 flex-center">
+        <div class="flex-col gap-4 sm:gap-2 flex-center">
+          <div class="sm:gap-2 flex-center">
+            <img src="images/leaf_left.png" alt="Leaf icon" />
 
-      <section></section>
+            <h2 class="text-center text-charcoal-purple sm:text-lg" tabindex="0">Trusted by leading healthcare providers</h2>
+
+            <img src="images/leaf_right.png" alt="Leaf icon" />
+          </div>
+
+          <div class="flex-col gap-6 flex-center">
+            <div class="flex-col gap-4 flex-center">
+              <h1 class="text-navy text-3xl md:text-5xl leading-none lg:text-[64px] lg:leading-[77.44px] font-semibold text-center" tabindex="0">Make clinical documentation easy</h1>
+
+              <p class="w-full font-normal text-center sm:text-lg md:max-w-screen-sm text-blue-gray" tabindex="0">Our easy-to-use clinical documentation tool helps you spend less time typing and more time with patients.</p>
+            </div>
+
+            <button class="button blue-button button-hover-white">Book a Demo</button>
+          </div>
+        </div>
+
+        <figure>
+          <img src="images/hospice.png" alt="Doctors talking to patients" />
+        </figure>
+      </section>
     </main>
 
     <footer>footer</footer>
