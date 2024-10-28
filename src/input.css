@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overscroll-behavior: none;
+}
+
 @layer components {
   .button {
     @apply py-3 px-6 rounded-[30px] font-medium text-lg;
@@ -20,6 +25,10 @@
 @layer utilities {
   .transition-smooth {
     @apply transition-all duration-500 ease-in-out;
+  }
+
+  .flex-center {
+    @apply flex items-center;
   }
 
   /* list item hover */
@@ -48,6 +57,19 @@
 
     & span:last-child {
       @apply origin-top -rotate-45 -translate-y-2 w-7;
+    }
+  }
+
+  /* open mobile menu */
+  .open-menu {
+    @apply absolute top-0 z-50 flex flex-col items-start w-full min-h-screen p-12 bg-white text-midnight-charcoal right-1 animate-bounce-up;
+  }
+
+  .show-btns {
+    @apply absolute z-50 flex items-start top-[330px] flex-row left-[42px] animate-bounce-up;
+
+    & button:first-child {
+      @apply pl-0 hover:bg-transparent text-midnight-charcoal hover:underline;
     }
   }
 }
