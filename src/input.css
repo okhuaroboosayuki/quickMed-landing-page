@@ -25,7 +25,8 @@ body {
   }
 
   .fixed-header {
-    @apply fixed top-0 left-0 z-50 w-full transition-transform ease-in-out;
+    @apply fixed top-0 left-0 z-50 w-full;
+    transition: transform 0.8s ease-in-out;
   }
 }
 
