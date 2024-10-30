@@ -20,9 +20,13 @@ module.exports = {
           "80%": { transform: "scaleY(1.2)" },
           "100%": { transform: "scaleY(1)" },
         },
+        "scroll-x": {
+          to: { transform: "translate(calc(-93% - 1.3rem))" },
+        },
       },
       animation: {
         "bounce-up": "bounce-up 0.5s ease-in-out forwards",
+        "scroll-x": "scroll-x 20s forwards linear infinite",
       },
     },
   },
