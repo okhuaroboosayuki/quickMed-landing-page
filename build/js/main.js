@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("scroll", () => {
     window.scrollY > lastScrollY ? header.classList.add("header-hidden") : header.classList.remove("header-hidden");
+    lastScrollY = window.scrollY;
   });
 
   /* MOBILE MENU TOGGLE */
