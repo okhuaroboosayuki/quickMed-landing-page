@@ -996,7 +996,6 @@ video {
   box-sizing: border-box;
 }
 
-html,
 body {
   overscroll-behavior: none;
 }
