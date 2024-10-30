@@ -76,4 +76,25 @@ body {
       @apply pl-0 hover:bg-transparent text-midnight-charcoal hover:underline;
     }
   }
+
+  /* trusted clients animation */
+  .scrollbar-hide {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  [data-animated="true"] {
+    @apply overflow-x-auto scrollbar-hide;
+  }
+
+  [data-animated="true"] #scroll-content {
+    @apply flex-nowrap animate-scroll-x w-max;
+  }
+
+  [data-animated="true"] #scroll-content:hover {
+    animation-play-state: paused;
+  }
 }

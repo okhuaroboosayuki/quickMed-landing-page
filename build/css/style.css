@@ -592,8 +592,8 @@ video {
   z-index: 50;
 }
 
-.mt-10{
-  margin-top: 2.5rem;
+.mt-16{
+  margin-top: 4rem;
 }
 
 .mt-5{
@@ -610,10 +610,6 @@ video {
 
 .h-0\.5{
   height: 0.125rem;
-}
-
-.h-\[500px\]{
-  height: 500px;
 }
 
 .min-h-screen{
@@ -636,20 +632,16 @@ video {
   width: 100%;
 }
 
-.w-\[300px\]{
-  width: 300px;
-}
-
-.w-\[500px\]{
-  width: 500px;
-}
-
 .resize{
   resize: both;
 }
 
 .flex-col{
   flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
 }
 
 .items-start{
@@ -692,12 +684,12 @@ video {
   gap: 25px;
 }
 
-.gap-\[6px\]{
-  gap: 6px;
+.gap-\[41\.2px\]{
+  gap: 41.2px;
 }
 
-.gap-3{
-  gap: 0.75rem;
+.gap-\[6px\]{
+  gap: 6px;
 }
 
 .\!border-none{
@@ -732,9 +724,9 @@ video {
   font-family: Inter, sans-serif;
 }
 
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-lg{
@@ -745,11 +737,6 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-medium{
@@ -770,10 +757,6 @@ video {
 
 .capitalize{
   text-transform: capitalize;
-}
-
-.leading-\[21\.78px\]{
-  line-height: 21.78px;
 }
 
 .leading-none{
@@ -975,6 +958,37 @@ video {
   }
 }
 
+/* trusted clients animation */
+
+[data-animated="true"]{
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+[data-animated="true"]::-webkit-scrollbar {
+  display: none;
+}
+
+[data-animated="true"] #scroll-content{
+  width: -moz-max-content;
+  width: max-content;
+}
+
+@keyframes scroll-x{
+  to{
+    transform: translate(calc(-93% - 1.3rem));
+  }
+}
+
+[data-animated="true"] #scroll-content{
+  animation: scroll-x 20s forwards linear infinite;
+  flex-wrap: nowrap;
+}
+
+[data-animated="true"] #scroll-content:hover {
+  animation-play-state: paused;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -998,20 +1012,12 @@ body {
     margin-top: 2.5rem;
   }
 
-  .sm\:h-full{
-    height: 100%;
-  }
-
-  .sm\:w-full{
-    width: 100%;
+  .sm\:gap-2{
+    gap: 0.5rem;
   }
 
   .sm\:gap-3{
     gap: 0.75rem;
-  }
-
-  .sm\:gap-2{
-    gap: 0.5rem;
   }
 
   .sm\:px-14{
@@ -1022,11 +1028,6 @@ body {
   .sm\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
-  }
-
-  .sm\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .sm\:text-lg{
@@ -1040,22 +1041,9 @@ body {
     max-width: 640px;
   }
 
-  .md\:text-\[18px\]{
-    font-size: 18px;
-  }
-
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
-  }
-
-  .md\:text-lg{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
-  .md\:leading-\[21\.78px\]{
-    line-height: 21.78px;
   }
 }
 
@@ -1074,6 +1062,10 @@ body {
 
   .lg\:hidden{
     display: none;
+  }
+
+  .lg\:\!justify-between{
+    justify-content: space-between !important;
   }
 
   .lg\:text-\[64px\]{
