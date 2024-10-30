@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  /* HIDE/SHOW HEADER */
+  const header = document.getElementById("header");
+
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    window.scrollY > lastScrollY ? header.classList.add("header-hidden") : header.classList.remove("header-hidden");
+  });
+
   /* MOBILE MENU TOGGLE */
   const mobileMenuBtn = document.getElementById("mobileMenuIcon");
   const nav = document.querySelector("#nav");

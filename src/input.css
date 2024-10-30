@@ -23,6 +23,10 @@ body {
   .blue-button {
     @apply text-white border transition-smooth bg-bright-violet;
   }
+
+  .fixed-header {
+    @apply fixed top-0 left-0 z-50 w-full transition-transform ease-in-out;
+  }
 }
 
 @layer utilities {
@@ -74,6 +78,11 @@ body {
     & button:first-child {
       @apply pl-0 hover:bg-transparent text-midnight-charcoal hover:underline;
     }
+  }
+
+  /* hide header */
+  .header-hidden {
+    @apply -translate-y-full;
   }
 
   /* trusted clients animation */
