@@ -1,4 +1,5 @@
-const initApp = () => {
+document.addEventListener("DOMContentLoaded", () => {
+  /* MOBILE MENU TOGGLE */
   const mobileMenuBtn = document.getElementById("mobileMenuIcon");
   const nav = document.querySelector("#nav");
   const navList = document.getElementById("nav-list");
@@ -18,21 +19,33 @@ const initApp = () => {
   window.addEventListener("resize", () => {
     if (navList.classList.contains("open-menu")) toggleMenu();
   });
-};
 
-// FUNCTIONS
+  /* TRUSTED CLIENTS SCROLL ANIMATION */
+  const trustedClientsSection = document.getElementById("trusted-clients");
+  const scrollContent = document.getElementById("scroll-content");
 
-/**
- * Sets the overflow property of the document based on the provided boolean value.
- *
- * @param {boolean} isOpen - If true, disables scrolling by setting overflow to hidden. If false, restores scrolling by resetting overflow properties.
- */
-function setDocumentOverFlow(isOpen) {
-  if (isOpen) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    trustedClientsSection.setAttribute("data-animated", true);
+
+    const scrollContentChildren = Array.from(scrollContent.children);
+
+    scrollContentChildren.forEach((child) => {
+      const duplicatedChild = child.cloneNode(true);
+
+      duplicatedChild.setAttribute("aria-hidden", true);
+
+      scrollContent.appendChild(duplicatedChild);
+    });
   }
-}
 
-document.addEventListener("DOMContentLoaded", initApp);
+  // FUNCTIONS
+
+  /**
+   * Sets the overflow property of the document based on the provided boolean value.
+   *
+   * @param {boolean} isOpen - If true, disables scrolling by setting overflow to hidden. If false, restores scrolling by resetting overflow properties.
+   */
+  function setDocumentOverFlow(isOpen) {
+    isOpen ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "");
+  }
+});
