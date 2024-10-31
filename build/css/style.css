@@ -593,6 +593,55 @@ video {
   transition: transform 0.8s ease-in-out;
 }
 
+.feature-card-container{
+  max-width: 796px;
+  flex-direction: column;
+  gap: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px){
+  .feature-card-container{
+    flex-direction: row;
+  }
+}
+
+.feature-card{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 249 251 / var(--tw-bg-opacity));
+  padding: 0.75rem;
+}
+
+.feature-card-text-container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.feature-card-heading{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(56 53 64 / var(--tw-text-opacity));
+}
+
+.feature-card-paragraph{
+  width: 100%;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(108 115 127 / var(--tw-text-opacity));
+}
+
 .relative{
   position: relative;
 }
@@ -641,6 +690,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[490px\]{
+  max-width: 490px;
+}
+
 .resize{
   resize: both;
 }
@@ -667,6 +720,10 @@ video {
 
 .\!justify-between{
   justify-content: space-between !important;
+}
+
+.gap-14{
+  gap: 3.5rem;
 }
 
 .gap-16{
@@ -720,6 +777,11 @@ video {
   padding-right: 1rem;
 }
 
+.py-24{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -766,6 +828,10 @@ video {
 
 .capitalize{
   text-transform: capitalize;
+}
+
+.leading-\[48px\]{
+  line-height: 48px;
 }
 
 .leading-none{
@@ -1056,6 +1122,15 @@ body {
     max-width: 640px;
   }
 
+  .md\:gap-16{
+    gap: 4rem;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
@@ -1093,6 +1168,10 @@ body {
 }
 
 @media (min-width: 1280px){
+  .xl\:mt-20{
+    margin-top: 5rem;
+  }
+
   .xl\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;

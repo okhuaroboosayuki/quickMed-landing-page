@@ -28,6 +28,26 @@ body {
     @apply fixed top-0 left-0 z-50 w-full;
     transition: transform 0.8s ease-in-out;
   }
+
+  .feature-card-container {
+    @apply flex-center gap-9 flex-col md:flex-row max-w-[796px];
+  }
+
+  .feature-card {
+    @apply flex flex-col items-start w-full gap-6 p-3 bg-ice-white;
+  }
+
+  .feature-card-text-container {
+    @apply flex flex-col items-start w-full gap-2;
+  }
+
+  .feature-card-heading {
+    @apply text-lg font-semibold text-charcoal-purple;
+  }
+
+  .feature-card-paragraph {
+    @apply w-full font-normal text-blue-gray;
+  }
 }
 
 @layer utilities {
