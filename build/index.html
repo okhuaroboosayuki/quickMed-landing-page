@@ -11,34 +11,34 @@
 
   <body class="min-h-screen px-4 sm:px-14 xl:px-20 font-inter">
     <header class="!justify-between py-5 px-4 sm:px-14 xl:px-20 bg-white flex-center fixed-header" id="header">
-      <div>
+      <div class="flex items-start w-[40%] xl:w-[35%]">
         <a href="/" class="gap-2 text-xl font-semibold flex-center sm:gap-3 sm:text-2xl text-midnight-charcoal">
           <img src="images/logo.webp" alt="QuickMed logo" width="50" height="50" />
           <span>QuickMed</span>
         </a>
       </div>
 
-      <nav class="hidden lg:block" id="nav" role="navigation">
+      <nav class="hidden w-[75%] xl:w-[90%] lg:flex-center" id="nav" role="navigation">
         <ul class="flex-center gap-[25px] text-blue-gray font-medium capitalize text-lg" id="nav-list">
-          <li class="hover-underline after:bg-midnight-charcoal">
+          <li class="text-center hover-underline after:bg-midnight-charcoal">
             <a href="/">home</a>
           </li>
-          <li class="hover-underline after:bg-midnight-charcoal">
+          <li class="text-center hover-underline after:bg-midnight-charcoal">
             <a href="#features">features</a>
           </li>
-          <li class="hover-underline after:bg-midnight-charcoal">
+          <li class="text-center hover-underline after:bg-midnight-charcoal">
             <a href="">how it works</a>
           </li>
-          <li class="hover-underline after:bg-midnight-charcoal">
+          <li class="text-center hover-underline after:bg-midnight-charcoal">
             <a href="">pricing</a>
           </li>
-          <li class="uppercase hover-underline after:bg-midnight-charcoal">
+          <li class="text-center uppercase hover-underline after:bg-midnight-charcoal">
             <a href="">faq</a>
           </li>
         </ul>
       </nav>
 
-      <div class="items-center gap-[20px] hidden lg:flex" id="btns">
+      <div class="gap-[20px] hidden lg:flex lg:justify-end w-[40%] xl:w-[35%]" id="btns">
         <button class="transition-smooth button !border-none button-hover-blue">Log in</button>
 
         <button class="blue-button button button-hover-white">Sign up</button>
@@ -51,10 +51,10 @@
       </button>
     </header>
 
-    <main class="mt-28 sm:mt-32 lg:mt-40">
+    <main class="mx-auto mt-28 sm:mt-32 lg:mt-40">
       <section class="flex-col gap-16 flex-center" aria-label="hero section">
         <section class="flex-col gap-4 sm:gap-2 flex-center">
-          <div class="sm:gap-2 flex-center">
+          <div class="w-full sm:gap-2 flex-center">
             <img src="images/leaf_left.webp" alt="Leaf icon" width="11.87" height="6.79" />
 
             <h2 class="text-center text-charcoal-purple sm:text-lg" tabindex="0">Trusted by leading healthcare providers</h2>
@@ -99,7 +99,7 @@
         <section class="flex-col w-full gap-6 flex-center">
           <div class="feature-card-container">
             <article class="feature-card">
-              <img src="images/notes-icon.webp" alt="icon" loading="lazy" width="100" height="100" />
+              <img src="images/notes-icon.webp" alt="icon" class="w-[70px] h-[70px] sm:h-[100px] sm:w-[100px]" loading="lazy" />
 
               <div class="feature-card-text-container">
                 <h3 class="feature-card-heading">Auto-Generates Notes</h3>
@@ -108,7 +108,7 @@
             </article>
 
             <article class="feature-card">
-              <img src="images/smart-template-icon.webp" alt="icon" loading="lazy" width="100" height="100" />
+              <img src="images/smart-template-icon.webp" alt="icon" class="w-[70px] h-[70px] sm:h-[100px] sm:w-[100px]" loading="lazy" />
 
               <div class="feature-card-text-container">
                 <h3 class="feature-card-heading">Smart Templates</h3>
@@ -119,7 +119,7 @@
 
           <div class="feature-card-container">
             <article class="feature-card">
-              <img src="images/sync-icon.webp" alt="icon" loading="lazy" width="100" height="100" />
+              <img src="images/sync-icon.webp" alt="icon" class="w-[70px] h-[70px] sm:h-[100px] sm:w-[100px]" loading="lazy" />
 
               <div class="feature-card-text-container">
                 <h3 class="feature-card-heading">Syncs with EHR</h3>
@@ -128,7 +128,7 @@
             </article>
 
             <article class="feature-card">
-              <img src="images/voice-to-note.webp" alt="icon" loading="lazy" width="100" height="100" />
+              <img src="images/voice-to-note.webp" alt="icon" class="w-[70px] h-[70px] sm:h-[100px] sm:w-[100px]" loading="lazy" />
 
               <div class="feature-card-text-container">
                 <h3 class="feature-card-heading">Voice to text</h3>
