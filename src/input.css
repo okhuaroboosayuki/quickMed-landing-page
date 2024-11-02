@@ -94,7 +94,7 @@ body {
   }
 
   .show-btns {
-    @apply absolute z-50 flex items-start top-[330px] flex-row left-[42px] animate-bounce-up;
+    @apply absolute z-50 flex items-start w-full landscape:top-[300px] top-[330px] flex-row left-[42px] animate-bounce-up;
 
     & button:first-child {
       @apply pl-0 hover:bg-transparent text-midnight-charcoal hover:underline;
