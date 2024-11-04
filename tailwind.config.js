@@ -13,6 +13,8 @@ module.exports = {
         "bright-violet": "#662FFF",
         "charcoal-purple": "#383540",
         "ice-white": "#F8F9FB",
+        "light-gray": "#E5E7EB",
+        "ghost-white": "rgba(246, 247, 247, .8)",
       },
       keyframes: {
         "bounce-up": {
