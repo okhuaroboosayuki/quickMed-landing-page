@@ -9,8 +9,8 @@
     <title>QuickMed - Clinical Documentation Made Easy</title>
   </head>
 
-  <body class="min-h-screen px-4 sm:px-14 xl:px-20 font-inter">
-    <header class="!justify-between py-5 px-4 sm:px-14 xl:px-20 bg-white flex-center fixed-header" id="header">
+  <body class="px-4 sm:px-14 xl:px-20 font-inter">
+    <header class="!justify-between py-5 px-6 sm:px-14 xl:px-20 bg-white flex-center fixed-header" id="header">
       <div class="flex items-start w-[40%] xl:w-[35%]">
         <a href="/" class="gap-2 text-xl font-semibold flex-center sm:gap-3 sm:text-2xl text-midnight-charcoal">
           <img src="images/logo.webp" alt="QuickMed logo" width="50" height="50" />
@@ -27,7 +27,7 @@
             <a href="#features">features</a>
           </li>
           <li class="text-center hover-underline after:bg-midnight-charcoal">
-            <a href="">how it works</a>
+            <a href="#how-it-works">how it works</a>
           </li>
           <li class="text-center hover-underline after:bg-midnight-charcoal">
             <a href="">pricing</a>
@@ -51,7 +51,7 @@
       </button>
     </header>
 
-    <main class="mx-auto mt-28 sm:mt-32 lg:mt-40">
+    <main class="mt-28 sm:mt-32 lg:mt-40 flex-center flex-col w-full">
       <section class="flex-col gap-16 flex-center" aria-label="hero section">
         <section class="flex-col gap-4 sm:gap-2 flex-center">
           <div class="w-full sm:gap-2 flex-center">
@@ -89,52 +89,108 @@
         </div>
       </section>
 
-      <section class="flex-col py-24 gap-14 md:gap-16 xl:mt-20 flex-center" id="features">
+      <section class="xl:mt-20 section-flex" id="features">
         <section class="flex-col gap-4 flex-center">
-          <h2 class="md:text-4xl text-3xl leading-[48px] max-w-[490px] text-center font-semibold text-navy">Less time on paperwork, more time with patients</h2>
+          <h2 class="max-w-[490px] section-header">Less time on paperwork, more time with patients</h2>
 
-          <p class="text-lg font-normal text-center text-blue-gray">Discover the features that make clinical notes effortless</p>
+          <p class="section-paragraph">Discover the features that make clinical notes effortless</p>
         </section>
 
         <section class="flex-col w-full gap-6 flex-center">
           <div class="feature-card-container">
-            <article class="feature-card">
+            <article class="gap-6 p-6 card">
               <img src="images/notes-icon.webp" alt="icon" class="w-[70px] h-[70px] sm:h-[100px] sm:w-[100px]" loading="lazy" />
 
-              <div class="feature-card-text-container">
-                <h3 class="feature-card-heading">Auto-Generates Notes</h3>
-                <p class="feature-card-paragraph">Create detailed clinical notes with just a few clicks. No more typing everything out manually.</p>
+              <div class="card-text-container">
+                <h3 class="card-heading">Auto-Generates Notes</h3>
+                <p class="card-paragraph">Create detailed clinical notes with just a few clicks. No more typing everything out manually.</p>
               </div>
             </article>
 
-            <article class="feature-card">
+            <article class="gap-6 p-6 card">
               <img src="images/smart-template-icon.webp" alt="icon" class="w-[70px] h-[70px] sm:h-[100px] sm:w-[100px]" loading="lazy" />
 
-              <div class="feature-card-text-container">
-                <h3 class="feature-card-heading">Smart Templates</h3>
-                <p class="feature-card-paragraph">Pick from ready-to-use templates that fit your needs, making documentation a breeze.</p>
+              <div class="card-text-container">
+                <h3 class="card-heading">Smart Templates</h3>
+                <p class="card-paragraph">Pick from ready-to-use templates that fit your needs, making documentation a breeze.</p>
               </div>
             </article>
           </div>
 
           <div class="feature-card-container">
-            <article class="feature-card">
+            <article class="gap-6 p-6 card">
               <img src="images/sync-icon.webp" alt="icon" class="w-[70px] h-[70px] sm:h-[100px] sm:w-[100px]" loading="lazy" />
 
-              <div class="feature-card-text-container">
-                <h3 class="feature-card-heading">Syncs with EHR</h3>
-                <p class="feature-card-paragraph">Connects with your electronic health records to pull in patient info automatically</p>
+              <div class="card-text-container">
+                <h3 class="card-heading">Syncs with EHR</h3>
+                <p class="card-paragraph">Connects with your electronic health records to pull in patient info automatically</p>
               </div>
             </article>
 
-            <article class="feature-card">
+            <article class="gap-6 p-6 card">
               <img src="images/voice-to-note.webp" alt="icon" class="w-[70px] h-[70px] sm:h-[100px] sm:w-[100px]" loading="lazy" />
 
-              <div class="feature-card-text-container">
-                <h3 class="feature-card-heading">Voice to text</h3>
-                <p class="feature-card-paragraph">Dictate your notes and let our tool handle the typing.</p>
+              <div class="card-text-container">
+                <h3 class="card-heading">Voice to text</h3>
+                <p class="card-paragraph">Dictate your notes and let our tool handle the typing.</p>
               </div>
             </article>
+          </div>
+        </section>
+      </section>
+
+      <section class="-mt-10 sm:px-20 section-flex" id="how-it-works">
+        <section class="flex-col gap-4 text-center flex-center">
+          <h2 class="section-header">How It Works</h2>
+
+          <p class="section-paragraph">Simple Steps to Create and Save Patient Documents in Minutes</p>
+        </section>
+
+        <section class="flex-col flex-center lg:grid lg:grid-rows-2 lg:grid-cols-2 gap-9 lg:place-content-center">
+          <div class="card gap-12 max-w-[403px] sm:h-[426px] h-fit pt-8 px-8 sm:relative">
+            <div class="card-text-container">
+              <h3 class="card-heading">Input Patient Data</h3>
+
+              <p class="text-sm card-paragraph">Enter or import patient information into the system with ease</p>
+            </div>
+
+            <img src="images/input-data-form.webp" alt="form for adding patients" class="sm:absolute sm:left-0 sm:w-full sm:bottom-0" loading="lazy" />
+          </div>
+
+          <div class="card gap-12 max-w-[403px] max-h-[426px] p-8">
+            <div class="card-text-container">
+              <h3 class="card-heading">Select Template</h3>
+
+              <p class="text-sm card-paragraph">Choose from a range of customizable templates.</p>
+            </div>
+
+            <img src="images/notes-template.webp" alt="two notes" loading="lazy" />
+          </div>
+
+          <div class="card gap-3 max-w-[403px] max-h-[426px] p-8 overflow-y-hidden">
+            <div class="card-text-container">
+              <h3 class="card-heading">Review and Edit</h3>
+
+              <p class="text-sm card-paragraph">The tool automatically generates a draft based on the input, which you can review and make adjustments to as necessary.</p>
+            </div>
+
+            <img src="images/single-note.webp" alt="a note" loading="lazy" />
+          </div>
+
+          <div class="card gap-4 sm:gap-12 max-w-[403px] max-h-[426px] p-8 overflow-y-hidden">
+            <div class="card-text-container">
+              <h3 class="card-heading">Finalize and Save</h3>
+
+              <p class="text-sm card-paragraph">Approve the final document and save it directly to your electronic health record system.</p>
+            </div>
+
+            <div class="relative flex-center flex-col w-full">
+              <img src="images/note-save.webp" alt="a  note with a save button" loading="lazy" />
+
+              <div class="absolute bottom-0 top-36 sm:top-40 z-50 flex-center w-full h-[170px] bg-ghost-white">
+                <button class="-mt-3 rounded-[30px] border-[1.5px] w-[164px] py-3 px-6 blue-button cursor-default">Save</button>
+              </div>
+            </div>
           </div>
         </section>
       </section>
