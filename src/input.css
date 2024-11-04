@@ -29,23 +29,35 @@ body {
     transition: transform 0.8s ease-in-out;
   }
 
+  .section-flex {
+    @apply flex flex-col items-center justify-center py-24 gap-14 md:gap-16;
+  }
+
+  .section-header {
+    @apply md:text-4xl text-3xl leading-[48px] text-center font-semibold text-navy;
+  }
+
+  .section-paragraph {
+    @apply text-lg font-normal text-center text-blue-gray;
+  }
+
   .feature-card-container {
     @apply flex-center gap-9 flex-col md:flex-row max-w-[796px];
   }
 
-  .feature-card {
-    @apply flex flex-col items-start w-full gap-6 p-3 bg-ice-white;
+  .card {
+    @apply flex flex-col items-start w-full bg-ice-white rounded-[30px];
   }
 
-  .feature-card-text-container {
+  .card-text-container {
     @apply flex flex-col items-start w-full gap-2;
   }
 
-  .feature-card-heading {
+  .card-heading {
     @apply text-lg font-semibold text-charcoal-purple;
   }
 
-  .feature-card-paragraph {
+  .card-paragraph {
     @apply w-full font-normal text-blue-gray;
   }
 }
