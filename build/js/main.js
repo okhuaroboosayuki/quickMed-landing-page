@@ -1,3 +1,5 @@
+import { pricing } from "./data.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   /* HIDE/SHOW HEADER */
   const header = document.getElementById("header");
@@ -48,6 +50,61 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* PRICING CARDS */
+  const loadCard = async () => {
+    const pricingCardsContainer = document.getElementById("price-cards-container");
+
+    pricingCardsContainer.innerHTML = pricing
+      .map(
+        (price, index) => `<div class="w-full h-[564px] flex flex-col capitalize items-center p-8 gap-8 border rounded-[32px] cursor-pointer " id="pricing-card" data-key="${index}">
+          <div class="flex-col self-start w-full flex-center !items-start gap-8">
+            ${
+              price.tag
+                ? `<div class="flex justify-between w-full">
+                  <h4 class="text-lg font-medium text-charcoal-purple">${price.title}</h4>
+
+                  <span class="px-3 py-1 text-sm font-medium border rounded-full bg-soft-violet border-bright-violet">${price.tag}</span>
+                </div>`
+                : `<h4 class="text-lg font-medium text-charcoal-purple">${price.title}</h4>`
+            }
+
+            ${price.price.amount ? ` <h3 class="text-4xl font-medium lowercase text-charcoal-purple">${price.price.amount} / ${price.price.per}</h3>` : `<h3 class="text-4xl font-medium text-charcoal-purple capitalize">${price.price}</h3>`}
+
+            <button class="w-full font-medium button bg-[${price.button.bgColor}]">${price.button.text}</button>
+          </div>
+
+          <ul class="flex flex-col items-start self-start gap-3">
+              ${price.benefits
+                .map(
+                  (benefit) =>
+                    `<li class="gap-3 flex-center" data-checked=${benefit.check}>
+                    <img src=${benefit.image} alt="icon" />
+                    <span>${benefit.name}</span>
+                  </li>`
+                )
+                .join("")}
+          </ul>
+        </div>`
+      )
+      .join("");
+  };
+
+  loadCard();
+
+  const pricingCards = document.querySelectorAll("#pricing-card");
+
+  if (pricingCards.length > 1) {
+    pricingCards[1].classList.add("active-card");
+  }
+
+  pricingCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      pricingCards.forEach((card) => card.classList.remove("active-card"));
+
+      card.classList.add("active-card");
+    });
+  });
+
   // FUNCTIONS
 
   /**
@@ -59,3 +116,61 @@ document.addEventListener("DOMContentLoaded", () => {
     isOpen ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "");
   }
 });
+
+{
+  /* <div class="w-full h-[564px] flex flex-col capitalize items-center p-8 gap-8 border active-card rounded-[32px] cursor-pointer" id="pricing-card">
+  <div class="flex-col self-start w-full flex-center !items-start gap-8">
+    <div class="flex justify-between w-full">
+      <h4 class="text-lg font-medium text-charcoal-purple">basic</h4>
+
+      <span class="px-3 py-1 text-sm font-medium border rounded-full bg-soft-violet border-bright-violet">Most Popular 🔥</span>
+    </div>
+
+    <h3 class="text-4xl font-medium lowercase text-charcoal-purple">$299/month</h3>
+
+    <button class="w-full font-medium button bg-[#F2F2F2]">get started</button>
+  </div>
+
+  <ul class="flex flex-col items-start self-start gap-3">
+    <li class="gap-3 flex-center" data-checked="good">
+      <img src="images/check-good.webp" alt="" />
+      <span>End-to-End Encryption</span>
+    </li>
+
+    <li class="gap-3 flex-center" data-checked="good">
+      <img src="images/check-good.webp" alt="" />
+      <span>HIPAA Compliance</span>
+    </li>
+
+    <li class="gap-3 flex-center" data-checked="good">
+      <img src="images/check-good.webp" alt="" />
+      <span>Email Support</span>
+    </li>
+
+    <li class="gap-3 flex-center" data-checked="good">
+      <img src="images/check-good.webp" alt="" />
+      <span>1,000 Patient Records</span>
+    </li>
+
+    <li class="gap-3 flex-center" data-checked="cancel">
+      <img src="images/check-cancel.webp" alt="" />
+      <span>Priority Support</span>
+    </li>
+
+    <li class="gap-3 flex-center" data-checked="cancel">
+      <img src="images/check-cancel.webp" alt="" />
+      <span>Advanced Analytics</span>
+    </li>
+
+    <li class="gap-3 flex-center" data-checked="cancel">
+      <img src="images/check-cancel.webp" alt="" />
+      <span>24/7 Dedicated Support</span>
+    </li>
+
+    <li class="gap-3 flex-center" data-checked="cancel">
+      <img src="images/check-cancel.webp" alt="" />
+      <span>Custom Integrations</span>
+    </li>
+  </ul>
+</div>; */
+}
