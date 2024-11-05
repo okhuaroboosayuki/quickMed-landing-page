@@ -17,7 +17,7 @@ body {
 
 @layer components {
   .button {
-    @apply py-3 px-6 rounded-[30px] font-medium md:text-lg border-[1.5px];
+    @apply py-3 px-6 rounded-[30px] font-medium md:text-lg border-[1.5px] capitalize;
   }
 
   .blue-button {
@@ -30,10 +30,14 @@ body {
   }
 
   .section-flex {
-    @apply flex flex-col items-center justify-center py-24 gap-14 md:gap-16;
+    @apply flex-col py-24 flex-center gap-14 md:gap-16;
   }
 
-  .section-header {
+  .section-top {
+    @apply flex-col gap-4 text-center;
+  }
+
+  .section-heading {
     @apply md:text-4xl text-3xl leading-[48px] text-center font-semibold text-navy;
   }
 
@@ -59,6 +63,14 @@ body {
 
   .card-paragraph {
     @apply w-full font-normal text-blue-gray;
+  }
+
+  .active-card {
+    @apply border-bright-violet transition-smooth;
+
+    & button {
+      @apply text-white blue-button transition-smooth;
+    }
   }
 }
 
@@ -137,5 +149,14 @@ body {
 
   [data-animated="true"] #scroll-content:hover {
     animation-play-state: paused;
+  }
+
+  /* pricing */
+  [data-checked="good"] {
+    @apply font-medium text-charcoal-purple;
+  }
+
+  [data-checked="cancel"] {
+    @apply text-[#828B9C] font-medium;
   }
 }
