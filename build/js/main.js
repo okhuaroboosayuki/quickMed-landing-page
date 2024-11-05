@@ -105,6 +105,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  /* FAQ ACCORDION */
+  const accordionTop = document.querySelectorAll("#accordion-top");
+
+  accordionTop.forEach((top) => {
+    top.addEventListener("click", () => {
+      const isActive = top.parentElement.classList.contains("active-accordion");
+
+      accordionTop.forEach((acc) => acc.parentElement.classList.remove("active-accordion"));
+
+      if (!isActive) {
+        top.parentElement.classList.toggle("active-accordion");
+      }
+    });
+  });
+
   // FUNCTIONS
 
   /**
