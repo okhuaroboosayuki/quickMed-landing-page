@@ -14,7 +14,9 @@ module.exports = {
         "charcoal-purple": "#383540",
         "ice-white": "#F8F9FB",
         "light-gray": "#E5E7EB",
+        "silver-gray": "#E0E2E6",
         "ghost-white": "rgba(246, 247, 247, .8)",
+        "soft-violet": "rgba(102, 47, 255, 0.1)",
       },
       keyframes: {
         "bounce-up": {
