@@ -159,4 +159,21 @@ body {
   [data-checked="cancel"] {
     @apply text-[#828B9C] font-medium;
   }
+
+  /* faq */
+  .active-accordion {
+    @apply py-6 transition-smooth;
+
+    & div:first-child {
+      @apply pb-6 border-b border-b-charcoal-purple transition-smooth;
+
+      & img {
+        @apply rotate-180 transition-smooth;
+      }
+    }
+
+    & div:last-child {
+      @apply block transition-smooth;
+    }
+  }
 }

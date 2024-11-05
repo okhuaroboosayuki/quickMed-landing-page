@@ -585,31 +585,6 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fixed-header{
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  z-index: 50;
-  width: 100%;
-  transition: transform 0.8s ease-in-out;
-}
-
-.section-flex{
-  flex-direction: column;
-  gap: 3.5rem;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (min-width: 768px){
-  .section-flex{
-    gap: 4rem;
-  }
-}
-
 .section-top{
   flex-direction: column;
   gap: 1rem;
@@ -775,6 +750,10 @@ video {
   margin-top: 7rem;
 }
 
+.mt-6{
+  margin-top: 1.5rem;
+}
+
 .flex{
   display: flex;
 }
@@ -848,6 +827,10 @@ video {
   max-width: 490px;
 }
 
+.max-w-\[806px\]{
+  max-width: 806px;
+}
+
 .cursor-default{
   cursor: default;
 }
@@ -912,6 +895,10 @@ video {
   gap: 1rem;
 }
 
+.gap-5{
+  gap: 1.25rem;
+}
+
 .gap-6{
   gap: 1.5rem;
 }
@@ -948,6 +935,10 @@ video {
   overflow-y: hidden;
 }
 
+.text-pretty{
+  text-wrap: pretty;
+}
+
 .rounded-\[30px\]{
   border-radius: 30px;
 }
@@ -958,6 +949,10 @@ video {
 
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 
 .border{
@@ -993,11 +988,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#F2F2F2\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
 .p-6{
@@ -1128,6 +1118,12 @@ video {
   color: rgb(20 28 83 / var(--tw-text-opacity));
 }
 
+.shadow-light{
+  --tw-shadow: 0px 0px 32px 0px rgba(16, 24, 40, 0.06);
+  --tw-shadow-colored: 0px 0px 32px 0px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .transition-smooth{
   transition-property: all;
   transition-duration: 500ms;
@@ -1138,6 +1134,31 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.fixed-header{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+  width: 100%;
+  transition: transform 0.8s ease-in-out;
+}
+
+.section-flex{
+  flex-direction: column;
+  gap: 3.5rem;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px){
+  .section-flex{
+    gap: 4rem;
+  }
 }
 
 /* list item hover */
@@ -1365,6 +1386,68 @@ video {
   color: rgb(130 139 156 / var(--tw-text-opacity));
 }
 
+/* faq */
+
+.active-accordion{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  & div:first-child{
+    border-bottom-width: 1px;
+  }
+  & div:first-child{
+    --tw-border-opacity: 1;
+    border-bottom-color: rgb(56 53 64 / var(--tw-border-opacity));
+  }
+  & div:first-child{
+    padding-bottom: 1.5rem;
+  }
+  & div:first-child{
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  & div:first-child{
+    transition-duration: 500ms;
+  }
+  & div:first-child{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  & div:first-child {
+    & img{
+      --tw-rotate: 180deg;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
+    & img{
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    & img{
+      transition-duration: 500ms;
+    }
+    & img{
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+  & div:last-child{
+    display: block;
+  }
+  & div:last-child{
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  & div:last-child{
+    transition-duration: 500ms;
+  }
+  & div:last-child{
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1464,6 +1547,11 @@ body {
   .md\:text-5xl{
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 
