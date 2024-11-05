@@ -108,7 +108,7 @@ export const pricing = [
     price: "custom",
     button: {
       bgColor: "#F2F2F2",
-      text: "get started",
+      text: "contact sales",
     },
     benefits: [
       {
