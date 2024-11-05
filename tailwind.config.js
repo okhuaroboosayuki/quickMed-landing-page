@@ -18,6 +18,9 @@ module.exports = {
         "ghost-white": "rgba(246, 247, 247, .8)",
         "soft-violet": "rgba(102, 47, 255, 0.1)",
       },
+      boxShadow: {
+        light: "0px 0px 32px 0px rgba(16, 24, 40, 0.06)",
+      },
       keyframes: {
         "bounce-up": {
           "0%": { transform: "scaleY(0)" },
