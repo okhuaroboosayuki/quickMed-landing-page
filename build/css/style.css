@@ -977,11 +977,6 @@ video {
   border-color: rgb(102 47 255 / var(--tw-border-opacity));
 }
 
-.bg-\[\#F2F2F2\]{
-  --tw-bg-opacity: 1;
-  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
-}
-
 .bg-ghost-white{
   background-color: rgba(246, 247, 247, .8);
 }
@@ -998,6 +993,11 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#F2F2F2\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
 .p-6{

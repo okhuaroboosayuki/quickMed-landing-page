@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     pricingCardsContainer.innerHTML = pricing
       .map(
-        (price, index) => `<div class="w-full h-[564px] flex flex-col capitalize items-center p-8 gap-8 border rounded-[32px] cursor-pointer " id="pricing-card" data-key="${index}">
+        (price) => `<div class="w-full h-[564px] flex flex-col capitalize items-center p-8 gap-8 border rounded-[32px] cursor-pointer " id="pricing-card" data-key="${price.title}">
           <div class="flex-col self-start w-full flex-center !items-start gap-8">
             ${
               price.tag
