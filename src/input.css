@@ -24,15 +24,6 @@ body {
     @apply text-white border transition-smooth bg-bright-violet;
   }
 
-  .fixed-header {
-    @apply fixed top-0 left-0 z-50 w-full;
-    transition: transform 0.8s ease-in-out;
-  }
-
-  .section-flex {
-    @apply flex-col py-24 flex-center gap-14 md:gap-16;
-  }
-
   .section-top {
     @apply flex-col gap-4 text-center;
   }
@@ -81,6 +72,15 @@ body {
 
   .flex-center {
     @apply flex items-center justify-center;
+  }
+
+  .fixed-header {
+    @apply fixed top-0 left-0 z-50 w-full;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .section-flex {
+    @apply flex-col py-24 flex-center gap-14 md:gap-16;
   }
 
   /* list item hover */
