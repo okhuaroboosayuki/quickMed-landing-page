@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             ${price.price.amount ? ` <h3 class="text-4xl font-medium lowercase text-charcoal-purple">${price.price.amount} / ${price.price.per}</h3>` : `<h3 class="text-4xl font-medium text-charcoal-purple capitalize">${price.price}</h3>`}
 
-            <button class="w-full font-medium button bg-[${price.button.bgColor}]">${price.button.text}</button>
+            <button class="w-full font-medium button button-bg-grey capitalize">${price.button.text}</button>
           </div>
 
           <ul class="flex flex-col items-start self-start gap-3">
