@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 ? `<div class="flex justify-between w-full">
                   <h4 class="text-lg font-medium text-charcoal-purple">${price.title}</h4>
 
-                  <span class="px-3 py-1 text-sm font-medium border rounded-full bg-soft-violet border-bright-violet">${price.tag}</span>
+                  <span class="sm:px-3 px-1 py-1 text-sm font-medium border rounded-full bg-soft-violet border-bright-violet">${price.tag}</span>
                 </div>`
                 : `<h4 class="text-lg font-medium text-charcoal-purple">${price.title}</h4>`
             }
