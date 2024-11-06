@@ -3,7 +3,6 @@ export const pricing = [
     title: "basic",
     price: "free",
     button: {
-      bgColor: "#F2F2F2",
       text: "get started",
     },
     benefits: [
@@ -57,7 +56,6 @@ export const pricing = [
     },
     tag: "Most Popular 🔥",
     button: {
-      bgColor: "#F2F2F2",
       text: "get started",
     },
     benefits: [
@@ -107,7 +105,6 @@ export const pricing = [
     title: "enterprise",
     price: "custom",
     button: {
-      bgColor: "#F2F2F2",
       text: "contact sales",
     },
     benefits: [
