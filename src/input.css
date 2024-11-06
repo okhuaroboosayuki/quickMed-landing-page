@@ -162,7 +162,7 @@ body {
 
   /* faq */
   .active-accordion {
-    @apply py-6 transition-smooth;
+    @apply transition-smooth;
 
     & div:first-child {
       @apply pb-6 border-b border-b-charcoal-purple transition-smooth;
@@ -173,7 +173,11 @@ body {
     }
 
     & div:last-child {
-      @apply block transition-smooth;
+      @apply mt-6;
+
+      & p {
+        @apply h-full opacity-100 transition-smooth;
+      }
     }
   }
 }
