@@ -63,6 +63,10 @@ body {
       @apply text-white blue-button transition-smooth;
     }
   }
+
+  .footer-nav {
+    @apply flex flex-col w-full gap-5;
+  }
 }
 
 @layer utilities {

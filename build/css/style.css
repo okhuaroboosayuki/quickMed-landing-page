@@ -709,6 +709,13 @@ video {
   }
 }
 
+.footer-nav{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .absolute{
   position: absolute;
 }
@@ -755,6 +762,10 @@ video {
 
 .mt-28{
   margin-top: 7rem;
+}
+
+.mr-1{
+  margin-right: 0.25rem;
 }
 
 .flex{
@@ -834,6 +845,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[293px\]{
+  max-width: 293px;
+}
+
 .max-w-\[403px\]{
   max-width: 403px;
 }
@@ -844,6 +859,10 @@ video {
 
 .max-w-\[538px\]{
   max-width: 538px;
+}
+
+.max-w-\[622px\]{
+  max-width: 622px;
 }
 
 .max-w-\[806px\]{
@@ -866,6 +885,10 @@ video {
   flex-direction: column;
 }
 
+.flex-col-reverse{
+  flex-direction: column-reverse;
+}
+
 .flex-wrap{
   flex-wrap: wrap;
 }
@@ -882,6 +905,10 @@ video {
   align-items: center;
 }
 
+.justify-start{
+  justify-content: flex-start;
+}
+
 .justify-center{
   justify-content: center;
 }
@@ -894,6 +921,14 @@ video {
   justify-content: space-between;
 }
 
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
+.\!gap-12{
+  gap: 3rem !important;
+}
+
 .gap-12{
   gap: 3rem;
 }
@@ -904,6 +939,10 @@ video {
 
 .gap-2{
   gap: 0.5rem;
+}
+
+.gap-20{
+  gap: 5rem;
 }
 
 .gap-3{
@@ -944,6 +983,14 @@ video {
 
 .gap-\[6px\]{
   gap: 6px;
+}
+
+.gap-14{
+  gap: 3.5rem;
+}
+
+.gap-1{
+  gap: 0.25rem;
 }
 
 .self-start{
@@ -1029,6 +1076,11 @@ video {
   padding: 2rem;
 }
 
+.px-16{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1064,8 +1116,30 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.px-9{
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.pb-16{
+  padding-bottom: 4rem;
+}
+
+.pt-24{
+  padding-top: 6rem;
+}
+
 .pt-8{
   padding-top: 2rem;
+}
+
+.pr-1{
+  padding-right: 0.25rem;
 }
 
 .text-center{
@@ -1074,6 +1148,11 @@ video {
 
 .font-inter{
   font-family: Inter, sans-serif;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-3xl{
@@ -1142,6 +1221,11 @@ video {
 .text-midnight-charcoal{
   --tw-text-opacity: 1;
   color: rgb(22 22 24 / var(--tw-text-opacity));
+}
+
+.text-midnight-navy{
+  --tw-text-opacity: 1;
+  color: rgb(6 10 35 / var(--tw-text-opacity));
 }
 
 .text-navy{
@@ -1533,6 +1617,11 @@ body {
   background-color: rgb(22 22 24 / var(--tw-bg-opacity));
 }
 
+.hover\:text-midnight-charcoal:hover{
+  --tw-text-opacity: 1;
+  color: rgb(22 22 24 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px){
   .sm\:absolute{
     position: absolute;
@@ -1574,6 +1663,10 @@ body {
     width: 100%;
   }
 
+  .sm\:flex-row{
+    flex-direction: row;
+  }
+
   .sm\:gap-12{
     gap: 3rem;
   }
@@ -1586,6 +1679,10 @@ body {
     gap: 0.75rem;
   }
 
+  .sm\:gap-8{
+    gap: 2rem;
+  }
+
   .sm\:px-14{
     padding-left: 3.5rem;
     padding-right: 3.5rem;
@@ -1594,6 +1691,11 @@ body {
   .sm\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .sm\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .sm\:text-2xl{
@@ -1614,6 +1716,30 @@ body {
 @media (min-width: 768px){
   .md\:max-w-screen-sm{
     max-width: 640px;
+  }
+
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
+  .md\:items-end{
+    align-items: flex-end;
+  }
+
+  .md\:gap-0{
+    gap: 0px;
+  }
+
+  .md\:gap-20{
+    gap: 5rem;
+  }
+
+  .md\:\!gap-12{
+    gap: 3rem !important;
+  }
+
+  .md\:gap-16{
+    gap: 4rem;
   }
 
   .md\:text-5xl{
@@ -1676,6 +1802,25 @@ body {
     justify-content: space-between !important;
   }
 
+  .lg\:gap-48{
+    gap: 12rem;
+  }
+
+  .lg\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .lg\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .lg\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .lg\:text-5xl{
     font-size: 3rem;
     line-height: 1;
@@ -1701,12 +1846,42 @@ body {
     margin-top: 5rem;
   }
 
+  .xl\:ml-4{
+    margin-left: 1rem;
+  }
+
+  .xl\:ml-10{
+    margin-left: 2.5rem;
+  }
+
+  .xl\:ml-32{
+    margin-left: 8rem;
+  }
+
   .xl\:w-\[35\%\]{
     width: 35%;
   }
 
   .xl\:w-\[90\%\]{
     width: 90%;
+  }
+
+  .xl\:w-0{
+    width: 0px;
+  }
+
+  .xl\:w-fit{
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .xl\:gap-\[370px\]{
+    gap: 370px;
+  }
+
+  .xl\:px-0{
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .xl\:px-20{
