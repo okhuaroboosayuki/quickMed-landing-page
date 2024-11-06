@@ -35,7 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // when moblie nav link is clicked, scroll to page & set doc overflow to false
   navLinks.forEach((link) => {
-    link.addEventListener("click", toggleMenu);
+    link.addEventListener("click", () => {
+      if (navList.classList.contains("open-menu")) toggleMenu();
+    });
   });
 
   /* TRUSTED CLIENTS SCROLL ANIMATION */
