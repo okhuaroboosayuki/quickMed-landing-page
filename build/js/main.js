@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuBtn = document.getElementById("mobileMenuIcon");
   const nav = document.querySelector("#nav");
   const navList = document.getElementById("nav-list");
+  const navLinks = document.querySelectorAll("#nav-list li a");
   const btns = document.getElementById("btns");
 
   const toggleMenu = () => {
@@ -23,13 +24,18 @@ document.addEventListener("DOMContentLoaded", () => {
     navList.classList.toggle("open-menu");
     btns.classList.toggle("show-btns");
 
-    mobileMenuBtn.classList.contains("toggle-menu") ? setDocumentOverFlow(true) : setDocumentOverFlow(false);
+    mobileMenuBtn.classList.contains("toggle-menu") ? setDocumentOverFlow(false) : setDocumentOverFlow(true);
   };
 
   mobileMenuBtn.addEventListener("click", toggleMenu);
 
   window.addEventListener("resize", () => {
     if (navList.classList.contains("open-menu")) toggleMenu();
+  });
+
+  // when moblie nav link is clicked, scroll to page & set doc overflow to false
+  navLinks.forEach((link) => {
+    link.addEventListener("click", toggleMenu);
   });
 
   /* TRUSTED CLIENTS SCROLL ANIMATION */
@@ -133,6 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
    * @param {boolean} isOpen - If true, disables scrolling by setting overflow to hidden. If false, restores scrolling by resetting overflow properties.
    */
   function setDocumentOverFlow(isOpen) {
-    isOpen ? (document.body.style.overflow = "hidden") : (document.body.style.overflow = "");
+    isOpen ? (document.body.style.overflow = "") : (document.body.style.overflow = "hidden");
   }
 });
