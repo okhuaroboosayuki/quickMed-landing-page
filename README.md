@@ -49,7 +49,7 @@ npm install
 4. Start the development server:
 
 ```bash
-npm start
+npm run start
 ```
 
 5. Open your browser and navigate to:
