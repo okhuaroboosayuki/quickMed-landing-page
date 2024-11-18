@@ -19,6 +19,7 @@ module.exports = {
         "slate-gray": "#828B9C",
         "ghost-white": "rgba(246, 247, 247, .8)",
         "soft-violet": "rgba(102, 47, 255, 0.1)",
+        "dark-charcoal-opaque": "rgba(41, 42, 50, 0.9)",
       },
       boxShadow: {
         light: "0px 0px 32px 0px rgba(16, 24, 40, 0.06)",
