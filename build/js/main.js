@@ -1,3 +1,5 @@
+"use strict";
+
 import { pricing } from "./data.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -132,6 +134,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const year = document.getElementById("year");
 
   year.innerText = new Date().getFullYear();
+
+  /* BACK TO TOP */
+  const backToTopBtn = document.getElementById("backToTop");
+
+  window.onscroll = function () {
+    document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000 ? (backToTopBtn.style.display = "block") : (backToTopBtn.style.display = "none");
+  };
+
+  backToTopBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 
   // FUNCTIONS
 
